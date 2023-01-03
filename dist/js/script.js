@@ -249,6 +249,12 @@
       if (thisWidget.value !== newValue && !isNaN(newValue)) {
         thisWidget.value = newValue;
       }
+      if (thisWidget.value < settings.amountWidget.defaultMin) {
+        thisWidget.value = 0;
+      }
+      if (thisWidget.value > settings.amountWidget.defaultMax) {
+        thisWidget.value = 10;
+      }
 
       thisWidget.input.value = thisWidget.value;
     }
