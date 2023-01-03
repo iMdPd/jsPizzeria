@@ -121,7 +121,7 @@
         );
         // console.log('active:', activeProduct);
         /* if there is active product and it's not thisProduct.element, remove class active from it */
-        if (activeProduct != null && activeProduct != thisProduct.elememnt) {
+        if (activeProduct != null && activeProduct != thisProduct.element) {
           activeProduct.classList.remove('active');
         }
         /* toggle active class on thisProduct.element */
@@ -205,6 +205,10 @@
           }
         }
       }
+
+      /* multiply price by amount */
+      price *= thisProduct.amountWidget.value;
+
       // update calculated price in the HTML
       thisProduct.priceElem.innerHTML = price;
     }
@@ -212,6 +216,9 @@
       const thisProduct = this;
 
       thisProduct.amountWidget = new AmountWidget(thisProduct.AmountWidgetElem);
+      thisProduct.AmountWidgetElem.addEventListener('updated', function () {
+        thisProduct.processOrder();
+      });
     }
   }
 
@@ -257,6 +264,7 @@
       }
 
       thisWidget.input.value = thisWidget.value;
+      this.announce();
     }
     initActions() {
       const thisWidget = this;
@@ -272,6 +280,12 @@
         event.preventDefault();
         thisWidget.setValue(thisWidget.value + 1);
       });
+    }
+    announce() {
+      const thisWidget = this;
+
+      const event = new Event('updated');
+      thisWidget.element.dispatchEvent(event);
     }
   }
 
