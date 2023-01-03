@@ -252,6 +252,8 @@
 
       const newValue = parseInt(value);
 
+      thisWidget.value = settings.amountWidget.defaultValue;
+
       /* TODO: Add validation */
       if (thisWidget.value !== newValue && !isNaN(newValue)) {
         thisWidget.value = newValue;
