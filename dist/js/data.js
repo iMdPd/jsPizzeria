@@ -7,7 +7,9 @@ dataSource.products = {
     price: 9,
     description:
       'Treat yourself with this soft, freshly baked cookie. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.',
-    images: ['<img class="active" src="images/doughnut.svg">'],
+    images: [
+      '<img class="active" src="images/doughnut.svg" style="width: 220px">',
+    ],
   },
   breakfast: {
     class: 'small',
@@ -15,7 +17,9 @@ dataSource.products = {
     price: 9,
     description:
       'There`s no better way to start your day than indulging yourself with a cup of fresh Italian coffee and crispy waffels. Made just for you on the spot, this breakfast combo has been our guests` favorite for over 50 years.',
-    images: ['<img class="active" src="images/breakfast.svg">'],
+    images: [
+      '<img class="active" src="images/breakfast.svg" style="width: 350px;left: 20%">',
+    ],
     params: {
       coffee: {
         label: 'Coffee type',
