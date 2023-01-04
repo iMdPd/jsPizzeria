@@ -322,6 +322,8 @@
     constructor(element) {
       const thisWidget = this;
 
+      thisWidget.value = settings.amountWidget.defaultValue;
+
       thisWidget.getElements(element);
       thisWidget.setValue(thisWidget.input.value);
       thisWidget.initActions();
@@ -345,8 +347,6 @@
 
       const newValue = parseInt(value);
 
-      thisWidget.value = settings.amountWidget.defaultValue;
-
       /* TODO: Add validation */
       if (thisWidget.value !== newValue && !isNaN(newValue)) {
         thisWidget.value = newValue;
@@ -358,6 +358,7 @@
         thisWidget.value = 10;
       }
 
+      console.log(thisWidget.value);
       thisWidget.input.value = thisWidget.value;
       this.announce();
     }
