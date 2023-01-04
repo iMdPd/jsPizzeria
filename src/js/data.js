@@ -35,7 +35,7 @@ dataSource.products = {
     description:
       'The true taste of Italy &ndash; homemade pizza as prepared by our grandmothers in old-fashoned brick ovens. Choose your favorite topping and enjoy your comfort food! All ingredients come straight from eco-friendly, trusted farms in the Italian countryside.',
     images: [
-      '<img class="active" src="images/pizza/crust.svg">',
+      '<img class="active" src="images/pizza/crust.svg" style="width: 350px">',
       '<img class="sauce-tomato" src="images/pizza/tomato-sauce.svg">',
       '<img class="sauce-cream" src="images/pizza/sour-cream.svg">',
       '<img class="toppings-salami" src="images/pizza/salami.svg">',
@@ -86,7 +86,7 @@ dataSource.products = {
     description:
       'A delicious salad made of fresh, home-grown products on a crispy lettuce base.',
     images: [
-      '<img class="active" src="images/salad/plate.svg">',
+      '<img class="active" src="images/salad/plate.svg" style="width: 350px">',
       '<img class="active ingredients-cucumber" src="images/salad/cucumber.svg" style="z-index: 1;">',
       '<img class="active ingredients-tomatoes" src="images/salad/tomatoes.svg" style="z-index: 2;">',
       '<img class="active ingredients-olives" src="images/salad/salad-olives.svg" style="z-index: 3;">',
