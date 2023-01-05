@@ -350,10 +350,11 @@
 
       /* TODO: Add validation */
       if (thisWidget.value !== newValue && !isNaN(newValue)) {
-        if (newValue <= settings.amountWidget.defaultMax) {
-          if (newValue >= settings.amountWidget.defaultMin) {
-            thisWidget.value = newValue;
-          }
+        if (
+          newValue <= settings.amountWidget.defaultMax &&
+          newValue >= settings.amountWidget.defaultMin
+        ) {
+          thisWidget.value = newValue;
         }
       }
 
