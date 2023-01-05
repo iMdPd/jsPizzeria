@@ -249,11 +249,12 @@
         }
       }
 
+      thisProduct.dom.priceSingle = price;
+
       /* multiply price by amount */
       price *= thisProduct.amountWidget.value;
 
       // update calculated price in the HTML
-      thisProduct.dom.priceSingle = price;
       thisProduct.dom.priceElem.innerHTML = price;
     }
     initAmountWidget() {
