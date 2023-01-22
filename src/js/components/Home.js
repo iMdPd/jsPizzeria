@@ -1,4 +1,4 @@
-import { templates } from '../settings.js';
+import { select, templates } from '../settings.js';
 
 class Home {
   constructor(element) {
@@ -19,7 +19,7 @@ class Home {
   }
 
   initWidgets() {
-    const elem = document.querySelector('.main-carousel');
+    const elem = document.querySelector(select.containerOf.carousel);
     // console.log(elem);
     /* eslint-disable */
     const flkty = new Flickity(elem, {

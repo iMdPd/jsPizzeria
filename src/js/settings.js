@@ -11,6 +11,7 @@ export const select = {
     pages: '#pages',
     booking: '.booking-wrapper',
     home: '.home-wrapper',
+    carousel: '.main-carousel',
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -125,7 +126,10 @@ export const settings = {
     tableIdAttribute: 'data-table',
   },
   db: {
-    url: '//localhost:3131',
+    url:
+      '//' +
+      window.location.hostname +
+      (window.location.hostname == 'localhost' ? ':3131' : ''),
     products: 'products',
     orders: 'orders',
     bookings: 'bookings',
