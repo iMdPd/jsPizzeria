@@ -294,6 +294,7 @@ class Booking {
     thisBooking.dom.form.addEventListener('submit', function (event) {
       event.preventDefault();
       thisBooking.sendBooking();
+      thisBooking.updateDOM();
     });
   }
 
@@ -357,6 +358,9 @@ class Booking {
           payload.table
         );
         thisBooking.updateDOM();
+        for (let table of thisBooking.dom.tables) {
+          table.classList.remove('selected');
+        }
       });
   }
 

@@ -10,13 +10,14 @@
       rel="stylesheet"
     />
     <link
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
+    <link rel="stylesheet" href="vendor/flickity.min.css" media="screen" />
     <link rel="stylesheet" href="vendor/range-slider.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -29,6 +30,7 @@
             <h2 class="logo__subtitle">the best homemade Italian food</h2>
           </div>
           <div class="main-nav">
+            <a href="#home">Home</a>
             <a href="#order">Order</a>
             <a href="#booking">Booking</a>
           </div>
@@ -83,6 +85,9 @@
     </header>
 
     <div id="pages">
+      <section id="home">
+        <div class="home-wrapper container"></div>
+      </section>
       <section id="order">
         <div id="product-list" class="product-list container"></div>
       </section>
@@ -90,6 +95,170 @@
         <div class="booking-wrapper container"></div>
       </section>
     </div>
+
+    <script id="template-home-widget" type="text/x-handlebars-template">
+          <section>
+        <div class='home-widget'>
+
+              <div class='img-box'>
+                <div class='link-reference order-img'>
+                  <a href='#order'></a>
+                  <div class="description1">
+                    <h2 class='page__title no-spacing'>ORDER ONLINE</h2>
+                    <p class="hide">delicious food delivered to your door</p>
+                  </div>
+                </div>
+                <div class='link-reference booking-img'>
+                  <a href='#booking'></a>
+                  <div class="description1">
+                    <h2 class='page__title no-spacing'>BOOK A TABLE</h2>
+                    <p class="hide">and make yourself comfortable</p>
+                  </div>
+                </div>
+                <div class='informator'>
+                  <h2 class='page__title no-spacing'>OPENING HOURS:</h2>
+                  <p>TUE-SUN, 12PM - 12AM</p>
+                </div>
+              </div>
+
+          </div>
+        </section>
+
+        <section>
+          <div class='main-carousel'>
+            <div class='carousel-cell'>
+
+                    <div class="box-opinion">
+                        <div class="box-image">
+                          <img src='/images/assets/pizza-3.jpg' alt='dinner' />
+                        </div>
+                        <div class="box-description">
+                          <h3 class='description-title'>Tastefull snacks!</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi ut aliquip ex ea commodo consequat.
+                              <br><br>
+                              <span>~ George Tuxedo<span></p>
+                        </div>
+                    </div>
+
+            </div>
+            <div class='carousel-cell'>
+
+                    <div class="box-opinion">
+                        <div class="box-image">
+                          <img src='/images/assets/pizza-3.jpg' alt='dinner' />
+                        </div>
+                        <div class="box-description">
+                          <h3 class='description-title'>Delicious taste!</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi ut aliquip ex ea commodo consequat.
+                              <br><br>
+                              <span>~ Abigail Johnson<span></p>
+                        </div>
+                    </div>
+
+            </div>
+            <div class='carousel-cell'>
+
+                    <div class="box-opinion">
+                        <div class="box-image">
+                          <img src='/images/assets/pizza-3.jpg' alt='dinner' />
+                        </div>
+                        <div class="box-description">
+                          <h3 class='description-title'>Amazing experience!</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                              nisi ut aliquip ex ea commodo consequat.
+                              <br><br>
+                              <span>~ Marc Clark<span></p>
+                        </div>
+                    </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section>
+
+            <div class="box-content">
+                <div class="box-image">
+                  <div class="container1">
+                    <img src='/images/assets/pizza-4.jpg' alt='dinner' />
+                    <div class="icons">
+                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-image">
+                  <div class="container1">
+                    <img src='/images/assets/pizza-5.jpg' alt='dinner' />
+                    <div class="icons">
+                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-image">
+                  <div class="container1">
+                    <img src='/images/assets/pizza-6.jpg' alt='dinner' />
+                    <div class="icons">
+                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-image">
+                  <div class="container1">
+                    <img src='/images/assets/pizza-7.jpg' alt='dinner' />
+                    <div class="icons">
+                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-image">
+                  <div class="container1">
+                    <img src='/images/assets/pizza-8.jpg' alt='dinner' />
+                    <div class="icons">
+                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-image">
+                  <div class="container1">
+                    <img src='/images/assets/pizza-9.jpg' alt='dinner' />
+                    <div class="icons">
+                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                  </div>
+                </div>
+
+          </div>
+
+      </section>
+    </script>
+
+    <footer class="page-footer">
+      <ul>
+        <a class="social" href="#"
+          ><i class="fa-brands fa-facebook-f"></i>Facebook</a
+        >
+        <a class="social" href="#"
+          ><i class="fa-brands fa-instagram"></i>Instagram</a
+        >
+        <a class="social" href="#"
+          ><i class="fa-brands fa-twitter"></i>Twitter</a
+        >
+      </ul>
+    </footer>
 
     <script id="template-cart-product" type="text/x-handlebars-template">
       <li>
@@ -295,6 +464,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="vendor/range-slider.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="js/app.js" type="module"></script>
   </body>
 </html>

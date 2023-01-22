@@ -2,18 +2,46 @@ import { settings, select, classNames } from '../js/settings.js';
 import Product from '../js/components/Product.js';
 import Cart from '../js/components/Cart.js';
 import Booking from '../js/components/Booking.js';
+import Home from '../js/components/Home.js';
 
 const app = {
+  initHome: function () {
+    const thisApp = this;
+    const homeWrapper = document.querySelector(select.containerOf.home);
+
+    new Home(homeWrapper);
+
+    thisApp.secondaryLinks = document.querySelectorAll('.link-reference a');
+
+    // console.log(thisApp.secondaryLinks);
+
+    for (let link of thisApp.secondaryLinks) {
+      link.addEventListener('click', function (event) {
+        const clickedElement = this;
+        event.preventDefault();
+
+        /* get page id from href attribute */
+        const id = clickedElement.getAttribute('href').replace('#', '');
+
+        /* run thisApp.activatePage with that id */
+        thisApp.activatePage(id);
+
+        /* change url # */
+        window.location.hash = '#/' + id;
+      });
+    }
+  },
   initBooking: function () {
     const bookingWrapper = document.querySelector(select.containerOf.booking);
 
     new Booking(bookingWrapper);
   },
+
   initPages: function () {
     const thisApp = this;
 
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
-    thisApp.navLinks = document.querySelectorAll(select.nav.links);
+    thisApp.navLinks = document.querySelectorAll(select.nav.mainLinks);
 
     const idFromHash = window.location.hash.replace('#/', '');
 
@@ -47,18 +75,20 @@ const app = {
   },
   activatePage: function (pageId) {
     const thisApp = this;
-    /* add active class to matching page, remove class active from non-matching page */
+
+    /*active class "active" to matching pages, remove form non-matching */
     for (let page of thisApp.pages) {
       page.classList.toggle(classNames.pages.active, page.id == pageId);
     }
-    /* add active class to matching link, remove class active from non-matching link */
+    /*active class "active" to matching links, remove form non-matching */
     for (let link of thisApp.navLinks) {
       link.classList.toggle(
         classNames.nav.active,
-        link.getAttribute('hrev') == '#' + pageId
+        link.getAttribute('href') == '#' + pageId
       );
     }
   },
+
   initMenu: function () {
     const thisApp = this;
 
@@ -104,6 +134,7 @@ const app = {
     thisApp.initData();
     thisApp.initCart();
     thisApp.initBooking();
+    thisApp.initHome();
   },
   initCart: function () {
     const thisApp = this;
