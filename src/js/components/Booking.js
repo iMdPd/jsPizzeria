@@ -327,15 +327,11 @@ class Booking {
       table: thisBooking.convertTableData(),
       duration: thisBooking.hoursAmount.correctValue,
       ppl: thisBooking.peopleAmount.correctValue,
-      starters: [],
+      starters: thisBooking.selectedStarters,
       phone: thisBooking.dom.phone.value,
       address: thisBooking.dom.address.value,
     };
-    // console.log('BookingsPayload :', payload);
-
-    for (let starter of thisBooking.selectedStarters) {
-      payload.starters.push(starter);
-    }
+    console.log('BookingsPayload :', payload);
 
     const options = {
       method: 'POST',
