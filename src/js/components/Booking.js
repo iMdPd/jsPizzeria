@@ -211,6 +211,13 @@ class Booking {
     );
   }
 
+  removeClassFromSelectedTable() {
+    const thisBooking = this;
+    for (let table of thisBooking.dom.tables) {
+      table.classList.remove(classNames.booking.tableSelected);
+    }
+  }
+
   initTables(clickedTable) {
     const thisBooking = this;
 
@@ -230,9 +237,7 @@ class Booking {
           clickedTable.classList.remove(classNames.booking.tableSelected);
           thisBooking.selectedTable = [];
         } else {
-          for (let table of thisBooking.dom.tables) {
-            table.classList.remove(classNames.booking.tableSelected);
-          }
+          thisBooking.removeClassFromSelectedTable();
 
           clickedTable.classList.add(classNames.booking.tableSelected);
 
@@ -285,9 +290,7 @@ class Booking {
         event.target == thisBooking.dom.hoursAmount
       ) {
         thisBooking.selectedTable = [];
-        for (let table of thisBooking.dom.tables) {
-          table.classList.remove('selected');
-        }
+        thisBooking.removeClassFromSelectedTable();
       }
     });
 
@@ -354,9 +357,7 @@ class Booking {
           payload.table
         );
         thisBooking.updateDOM();
-        for (let table of thisBooking.dom.tables) {
-          table.classList.remove('selected');
-        }
+        thisBooking.removeClassFromSelectedTable();
       });
   }
 
