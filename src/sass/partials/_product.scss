@@ -116,6 +116,7 @@
     padding: 0;
   }
 }
+
 .product:nth-of-type(n + 3) {
   img {
     scale: 0.8;
@@ -126,6 +127,7 @@
     width: 350px;
   }
 }
+
 .product:nth-of-type(-n + 2) img {
   position: relative;
   scale: 0.8;

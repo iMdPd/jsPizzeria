@@ -76,7 +76,7 @@
     flex: 0 0 100%;
     margin-top: 8px;
   }
-  
+
   .product:nth-of-type(n + 3) img {
     scale: 0.6;
     transform: translate(-83%, -83%);
@@ -99,6 +99,7 @@
     input,
     button {
       width: 100%;
+      max-width: 300px;
     }
   }
 
@@ -109,13 +110,6 @@
 
   .floor-plan {
     scale: 0.85;
-  }
-
-  .order-confirmation {
-    input,
-    button {
-      max-width: 300px;
-    }
   }
 }
 
