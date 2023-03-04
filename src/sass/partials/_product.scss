@@ -23,8 +23,8 @@
   &__icon {
     position: absolute;
     color: $color-main;
-    right: (-$base-size * 5);
-    top: $base-size;
+    left: -30px;
+    top: -50px;
     font-size: ($base-size * 1.5);
     transition: $transition;
   }
@@ -39,7 +39,7 @@
   }
 
   &__wrapper {
-    @include flex(row, center, space-between);
+    @include flex(row, center, space-around);
     @include accordion-closed();
     animation: flipdown 0.5s ease both;
   }
@@ -56,7 +56,7 @@
   }
 
   &__order {
-    width: calc(100% - 400px);
+    // width: calc(100% - 400px);
     opacity: 0;
     transition: opacity 200ms;
   }
@@ -115,4 +115,21 @@
     margin: 0 ($base-size / 2);
     padding: 0;
   }
+}
+.product:nth-of-type(n + 3) {
+  img {
+    scale: 0.8;
+    transform: translate(-65%, -60%);
+  }
+
+  img:first-of-type {
+    width: 350px;
+  }
+}
+.product:nth-of-type(-n + 2) img {
+  position: relative;
+  scale: 0.8;
+  left: 0%;
+  top: 0%;
+  transform: translate(0%, 0%);
 }

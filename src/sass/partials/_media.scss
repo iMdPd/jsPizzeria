@@ -1,0 +1,135 @@
+@media (max-width: 768px) {
+  .main-nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .home-wrapper {
+    padding: 72px 20px;
+  }
+
+  .container {
+    max-width: 95%;
+  }
+
+  .cart {
+    position: inherit;
+    width: auto;
+    max-width: 300px;
+    display: inline-block;
+  }
+
+  .header__wrapper {
+    text-align: center;
+
+    .logo {
+      width: -webkit-fill-available;
+    }
+  }
+
+  .box-image {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 580px) {
+  .order-confirmation {
+    input,
+    button {
+      display: inline-block;
+      width: 300px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .product__wrapper:nth-of-type(n + 2) {
+    flex-direction: column-reverse;
+  }
+
+  .time-picker {
+    flex-direction: column;
+
+    .date-picker {
+      align-self: center;
+
+      label {
+        text-align-last: center;
+      }
+    }
+
+    .hour-picker {
+      align-self: center;
+      width: 165px;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .product__wrapper:nth-of-type(-n + 2) {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 425px) {
+  .link-reference {
+    flex: 0 0 100%;
+    margin-top: 8px;
+  }
+  
+  .product:nth-of-type(n + 3) img {
+    scale: 0.6;
+    transform: translate(-83%, -83%);
+  }
+
+  .box-opinion {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-image {
+    flex: 0 0 100%;
+  }
+
+  .booking-wrapper {
+    padding: 72px 0px;
+  }
+
+  .order-confirmation {
+    input,
+    button {
+      width: 100%;
+    }
+  }
+
+  .booking-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .floor-plan {
+    scale: 0.85;
+  }
+
+  .order-confirmation {
+    input,
+    button {
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .main-nav {
+    bottom: -101px;
+
+    a {
+      scale: 0.8;
+      margin-right: 0;
+    }
+  }
+
+  .floor-plan {
+    width: 300px;
+  }
+}

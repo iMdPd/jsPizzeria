@@ -227,4 +227,12 @@
 .booking-options {
   @include flex(row, flex-start, space-between);
   margin: ($base-size * 4) auto;
+
+  label {
+    text-align: center;
+  }
+}
+
+.order-confirmation {
+  text-align: center;
 }
