@@ -28,7 +28,7 @@ If you want check jsPizzeria, it is deployed on Replit. Just click link below :
 
 https://js-pizzeria.imdpd.repl.co/
 
-<p align="right">(<a style="color: #ff6b6b;" href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 <a id="overview">Quick overview :</a>
 
@@ -54,7 +54,8 @@ information alert. Selecting a free table changes its color to green. After clic
 <p align="center">
   <img src="./src/images/assets/booking.gif" alt="animated" />
 <p>
-<p align="right">(<a style="color: #ff6b6b;" href="#readme-top">back to top</a>)</p>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📌 <a id="roadmap">Roadmap :</a>
 
@@ -64,7 +65,7 @@ information alert. Selecting a free table changes its color to green. After clic
 - [ ] Order confirmation on submit event.
 - [ ] Set product quantity to 0 on click event on "Add to cart" button.
 
-<p align="right">(<a style="color: #ff6b6b;" href="#readme-top">back to top</a>)</p>
+<p align="right">(<a  href="#readme-top">back to top</a>)</p>
 
 ## 💾 <a id="how-to-use">How To Use :</a>
 
@@ -82,7 +83,7 @@ $ npm install
 $ npm run watch
 ```
 
-<p align="right">(<a style="color: #ff6b6b;" href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤙🏻 <a id="contact">Contact :</a>
 
