@@ -80,7 +80,7 @@
   }
 
   &__fill {
-    background: #ff6b6b;
+    background: $color-main;
     transition: width 100ms;
     transition-timing-function: cubic-bezier(0, 1, 0, 1);
     box-shadow: none;
