@@ -10,9 +10,8 @@ class Cart {
 
     thisCart.getElements(element);
     thisCart.initActions();
-
-    // console.log('New Cart:', thisCart);
   }
+
   getElements(element) {
     const thisCart = this;
     thisCart.dom = {};
@@ -41,6 +40,7 @@ class Cart {
     );
     thisCart.dom.phone = thisCart.dom.wrapper.querySelector(select.cart.phone);
   }
+
   initActions() {
     const thisCart = this;
 
@@ -58,6 +58,7 @@ class Cart {
       thisCart.sentOrder();
     });
   }
+
   add(menuProduct) {
     const thisCart = this;
     /* generate HTML based on template */
@@ -68,12 +69,11 @@ class Cart {
 
     /* add element to menu */
     thisCart.dom.productList.appendChild(generatedDOM);
-    // console.log('adding product', menuProduct);
 
     thisCart.products.push(new CartProduct(menuProduct, generatedDOM));
-    console.log('thisCart.products:', thisCart.products);
     thisCart.update();
   }
+
   update() {
     const thisCart = this;
 
@@ -91,16 +91,6 @@ class Cart {
     }
 
     thisCart.totalPrice = thisCart.subtotalPrice + thisCart.deliveryFee;
-
-    /*       console.log(
-      'totalNumber: ',
-      thisCart.totalNumber,
-      'subtotalPrice: ',
-      thisCart.subtotalPrice,
-      'totalPrice:',
-      thisCart.totalPrice
-    ); */
-
     thisCart.dom.deliveryFee.innerHTML = thisCart.deliveryFee;
     thisCart.dom.subtotalPrice.innerHTML = thisCart.subtotalPrice;
     thisCart.dom.totalNumber.innerHTML = thisCart.totalNumber;
@@ -108,18 +98,18 @@ class Cart {
       dom.innerHTML = thisCart.totalPrice;
     }
   }
+
   remove(cartProduct) {
     const thisCart = this;
 
     cartProduct.dom.wrapper.remove();
     const removeProduct = thisCart.products.indexOf(cartProduct);
-    // console.log('removeProduct', removeProduct);
 
     thisCart.products.splice(removeProduct, 1);
 
     thisCart.update();
-    // console.log('thisCart.products:', thisCart.products);
   }
+
   sentOrder() {
     const thisCart = this;
     const url = settings.db.url + '/' + settings.db.orders;
@@ -132,7 +122,6 @@ class Cart {
       deliveryFee: settings.cart.defaultDeliveryFee,
       products: [],
     };
-    console.log('payload:', payload);
     for (let prod of thisCart.products) {
       payload.products.push(prod.getData());
     }

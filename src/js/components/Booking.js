@@ -37,8 +37,6 @@ class Booking {
       eventsRepeat: [settings.db.repeatParam, endDateParam],
     };
 
-    // console.log('detData params :', params);
-
     const urls = {
       bookings:
         settings.db.url +
@@ -61,7 +59,7 @@ class Booking {
         '?' +
         params.eventsRepeat.join('&'),
     };
-    // console.log('detData urls :', urls);
+
     Promise.all([
       fetch(urls.bookings),
       fetch(urls.eventsCurrent),
@@ -78,9 +76,6 @@ class Booking {
         ]);
       })
       .then(function ([bookings, eventsCurrent, eventsRepeat]) {
-        // console.log('bookings: ', bookings);
-        // console.log('eventsCurrent: ', eventsCurrent);
-        // console.log('eventsRepeat: ', eventsRepeat);
         thisBooking.parseData(bookings, eventsCurrent, eventsRepeat);
       });
   }
@@ -118,7 +113,6 @@ class Booking {
       }
     }
 
-    // console.log('thisBooking.booked', thisBooking.booked);
     thisBooking.updateDOM();
   }
 
@@ -169,7 +163,6 @@ class Booking {
       hourBlock < startHour + duration;
       hourBlock += 0.5
     ) {
-      // console.log('loop', hourBlock);
       if (typeof thisBooking.booked[date][hourBlock] == 'undefined') {
         thisBooking.booked[date][hourBlock] = [];
       }
@@ -221,12 +214,8 @@ class Booking {
   initTables(clickedTable) {
     const thisBooking = this;
 
-    // console.log('tableData', tableData);
-
     /* if it's true that clickedTable contains class 'table' */
     if (clickedTable.classList.contains('table')) {
-      // console.log('Table is clicked!', clickedTable);
-
       /* if it's true that clickedTable contains class 'booked' */
       if (clickedTable.classList.contains(classNames.booking.tableBooked)) {
         /* display alert with notification about already booked table */
@@ -248,7 +237,6 @@ class Booking {
 
           thisBooking.selectedTable = [tableData];
         }
-        // console.log('selectedTable', thisBooking.selectedTable);
       }
     }
   }
@@ -305,7 +293,6 @@ class Booking {
     const thisBooking = this;
     /* make new constant named "inputValue" and give it the 'value' attribute of clicked input  */
     const inputValue = clickedCheckbox.getAttribute('value');
-    // console.log('inputValue:', inputValue);
     /* check if input is checked */
     if (clickedCheckbox.checked == true) {
       /* push inputValue to selectedStarters array */
@@ -316,7 +303,6 @@ class Booking {
 
       thisBooking.selectedStarters.splice(removeValue, 1);
     }
-    // console.log('selectedStarters :', thisBooking.selectedStarters);
   }
 
   sendBooking() {
@@ -334,7 +320,6 @@ class Booking {
       phone: thisBooking.dom.phone.value,
       address: thisBooking.dom.address.value,
     };
-    console.log('BookingsPayload :', payload);
 
     const options = {
       method: 'POST',

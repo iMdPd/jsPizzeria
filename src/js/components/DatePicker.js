@@ -12,6 +12,7 @@ class DatePicker extends BaseWidget {
     );
     thisWidget.initPlugin();
   }
+
   initPlugin() {
     const thisWidget = this;
 
@@ -20,6 +21,7 @@ class DatePicker extends BaseWidget {
       thisWidget.minDate,
       settings.datePicker.maxDaysInFuture
     );
+
     // eslint-disable-next-line no-undef
     flatpickr(thisWidget.dom.input, {
       defaultDate: thisWidget.minDate,
@@ -38,6 +40,7 @@ class DatePicker extends BaseWidget {
       },
     });
   }
+
   parseValue(value) {
     return value;
   }

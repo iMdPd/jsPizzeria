@@ -13,8 +13,6 @@ class Product {
     thisProduct.initOrderForm();
     thisProduct.initAmountWidget();
     thisProduct.processOrder();
-
-    // console.log('new Product:', thisProduct);
   }
 
   renderInMenu() {
@@ -71,7 +69,6 @@ class Product {
         const activeProduct = document.querySelector(
           select.all.menuProductsActive
         );
-        // console.log('active:', activeProduct);
         /* if there is active product and it's not thisProduct.element, remove class active from it */
         if (activeProduct != null && activeProduct != thisProduct.element) {
           activeProduct.classList.remove('active');
@@ -101,8 +98,6 @@ class Product {
       thisProduct.processOrder();
       thisProduct.addToCart();
     });
-
-    // console.log('initOrderForm');
   }
 
   processOrder() {
@@ -110,7 +105,6 @@ class Product {
 
     // covert form to object structure e.g. { sauce: ['tomato'], toppings: ['olives', 'redPeppers']}
     const formData = utils.serializeFormToObject(thisProduct.dom.form);
-    // console.log('formData', formData);
 
     // set price to default price
     let price = thisProduct.data.price;
@@ -119,19 +113,16 @@ class Product {
     for (let paramId in thisProduct.data.params) {
       // determine param value, e.g. paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
       const param = thisProduct.data.params[paramId];
-      // console.log(paramId, param);
 
       // for every option in this category
       for (let optionId in param.options) {
         // determine option value, e.g. optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
         const option = param.options[optionId];
-        // console.log(optionId, option);
 
         // determine option image matching to
         const optionImage = thisProduct.dom.imageWrapper.querySelector(
           '.' + paramId + '-' + optionId
         );
-        // console.log(optionImage);
 
         // check if there is param with a name of paramId in formData and if it includes optionId
         const optionSelected =
@@ -168,6 +159,7 @@ class Product {
     // update calculated price in the HTML
     thisProduct.dom.priceElem.innerHTML = price;
   }
+
   initAmountWidget() {
     const thisProduct = this;
 
@@ -178,6 +170,7 @@ class Product {
       thisProduct.processOrder();
     });
   }
+
   addToCart() {
     const thisProduct = this;
     thisProduct.name = thisProduct.data.name;
@@ -193,6 +186,7 @@ class Product {
     });
     thisProduct.element.dispatchEvent(event);
   }
+
   prepareCartProduct() {
     const thisProduct = this;
     const productSummary = {
@@ -205,6 +199,7 @@ class Product {
     };
     return productSummary;
   }
+
   prepareCartProductParams() {
     const thisProduct = this;
 

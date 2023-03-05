@@ -15,13 +15,11 @@ class Home {
     thisHome.dom.wrapper = element;
 
     const generatedHTML = templates.homeWidget();
-    console.log(generatedHTML);
     thisHome.dom.wrapper.innerHTML = generatedHTML;
   }
 
   initWidgets() {
     const elem = document.querySelector(select.containerOf.carousel);
-    // console.log(elem);
     /* eslint-disable */
     const flkty = new Flickity(elem, {
       /* eslint-enable */
@@ -32,7 +30,6 @@ class Home {
       pauseAutoPlayOnHover: false,
       prevNextButtons: false,
     });
-    // console.log(flkty);
   }
 }
 

@@ -14,8 +14,6 @@ class CartProduct {
     thisCartProduct.getElements(element);
     thisCartProduct.initAmountWidget();
     thisCartProduct.initActions();
-
-    // console.log('thisCartProduct', thisCartProduct);
   }
   getElements(element) {
     const thisCartProduct = this;
@@ -28,6 +26,7 @@ class CartProduct {
       remove: element.querySelector(select.cartProduct.remove),
     };
   }
+
   initAmountWidget() {
     const thisCartProduct = this;
 
@@ -41,6 +40,7 @@ class CartProduct {
       thisCartProduct.dom.price.innerHTML = thisCartProduct.price;
     });
   }
+
   remove() {
     const thisCartProduct = this;
 
@@ -50,6 +50,7 @@ class CartProduct {
     });
     thisCartProduct.dom.wrapper.dispatchEvent(event);
   }
+
   initActions() {
     const thisCartProduct = this;
 
@@ -61,6 +62,7 @@ class CartProduct {
       thisCartProduct.remove();
     });
   }
+
   getData() {
     const thisCartProduct = this;
 
