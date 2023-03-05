@@ -18,12 +18,28 @@
 
 ## 🚀 <a id="overview">Quick overview</a>
 
-The Pizzeria website was developed using JavaScript classes and a Handlebars templates. A website created in the SPA model is fully loaded only once, and then when navigating the pages, elements are replaced by those that are characteristic of specific page. JSON Server is used 
+The Pizzeria website was developed using JavaScript classes and a Handlebars templates. A website created in the SPA model is fully loaded only once, and then when navigating the pages, elements are replaced by those that are characteristic of a specific page. JSON Server is used as a database for orders, products, events, bookings.
+
+The first page contains:
+
+1. Links to orders and booking subpages.
+   Moving to the next subpages changes the URL address.
+2. Carousel with customer reviews.
+   I used Flickity to create it
+3. Flex box with a gallery of sample photos.
+
+the Order page contains dishes that the pizza restaurant has on its menu. Individual products have been fetched from JSON server. The customer has the ability to configure each of the products using radio buttons and checkboxes. Along with the selection of individual ingredients, the price of the product is updated. Pizza and the salad have a appearance change feature. Product quantity can be selected from 1 to 10. The Add to Cart button adds a personalized product to your cart.
+
+![screenshot](/src/images/assets/productOrder.gif)
+
+On the third page, you can book a table in a restaurant. Flatpick was used to select the booking date. The Range-slider allows us to choose the booking time from the opening hours of the restaurant. The customer has the option to select the number of guests and the estimated booking time in the range from 1 to 10. The customer also has the option of specifying the type of starters in advance. Depending on the time and day of booking, available tables are updated. Attempting to select a reserved table results with
+information alert. Selecting a free table changes its color to green. After clicking the booking button saves the booking data to the JSON server
+
+<p align="center">
+  <img src="./src/images/assets/booking.gif" alt="animated" />
+<p>
 
 
-
-
- Project presents a Pizzeria website with three pages.  The second one has the article number, author, and content of the article. Under the article, there's a list of tags belonging to the article. The third column contains a tag cloud based on the most frequently repeated tags. Depending on the number of occurrences, the size of the text in the tag cloud is calculated. The names of authors have the number of occurrences in brackets.
 
 <p align="right">(<a style="color: #ff6b6b;" href="#readme-top">back to top</a>)</p>
 
