@@ -8,11 +8,11 @@
 <h4 align="center">Pizzeria website created as part of the Kodilla Bootcamp project. <br /> Website was developed using JSON server, JavaScript classes Handlebars templates,<br /> Flatpickr as a datetime picker, Flickity for carousels and Range-Slider.</h4>
 
 <p align="center">
-  <a style="color: #ff6b6b;" href="#demo">Demo</a> •
-  <a style="color: #ff6b6b;" href="#overview">Quick overview</a> •
-   <a style="color: #ff6b6b;" href="#roadmap">Roadmap</a> •
-  <a style="color: #ff6b6b;" href="#how-to-use">How To Use</a> •
-  <a style="color: #ff6b6b;" href="#profile">Checkout my profile</a>
+  <a href="#demo">Demo</a> •
+  <a href="#overview">Quick overview</a> •
+   <a href="#roadmap">Roadmap</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#contact">Contact</a>
 </p>
 
 <br />
@@ -84,6 +84,6 @@ $ npm run watch
 
 <p align="right">(<a style="color: #ff6b6b;" href="#readme-top">back to top</a>)</p>
 
-## 🤙🏻 <a id="profile">Checkout my GitHub profile :</a>
+## 🤙🏻 <a id="contact">Contact :</a>
 
 > GitHub [@iMdPd](https://github.com/iMdPd)
