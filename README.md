@@ -5,12 +5,13 @@
  <img src="./src/images/assets/logo.png" alt="logo" width="400"></a>
 </p>
 
-<h4 align="center">Pizzeria website created as part of the Kodilla Bootcamp project. <br /> Website was developed using JSON server, JavaScript classes Handlebars templates,<br /> Flatpickr as a datetime picker, Flickity for carousels and Range-Slider.</h4>
+<h4 align="center">Pizzeria website created as part of the Kodilla Bootcamp project. <br /> Website was developed using JSON server, JavaScript classes Handlebars templates,<br /> Flatpickr as a datetime picker, Range-Slider and Flickity for carousels .</h4>
 
 <p align="center">
   <a href="#demo">Demo</a> •
   <a href="#overview">Quick overview</a> •
-   <a href="#roadmap">Roadmap</a> •
+  <a href="#languages">Languages&Tools</a> •
+  <a href="#roadmap">Roadmap</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#contact">Contact</a>
 </p>
@@ -48,6 +49,8 @@ The order page contains dishes that the pizza restaurant has on its menu. Indivi
   <img src="./src/images/assets/productOrder.gif" alt="animated" />
 <p>
 
+<p align="right">(<a  href="#readme-top">back to top</a>)</p>
+
 On the third page, you can book a table in a restaurant. Flatpick was used to select the booking date. The Range-slider allows us to choose the booking time from the opening hours of the restaurant. The customer has the option to select the number of guests and the estimated booking time in the range from 1 to 10. The customer also has the option of specifying the type of starters in advance. Depending on the time and day of booking, available tables are updated. Attempting to select a reserved table results with
 information alert. Selecting a free table changes its color to green. After clicking the booking button saves the booking data to the JSON server
 
@@ -56,6 +59,23 @@ information alert. Selecting a free table changes its color to green. After clic
 <p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🛠️ <a id="languages">Languages & tools</a>
+
+|                                                                   Language / Tool                                                                    | Description                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------- |
+|                    ![HTML](https://img.shields.io/badge/HTML5-E34F26.svg?style-platic-=for-the-badge&logo=HTML5&logoColor=white)                     | Language used for structuring and presenting content on the World Wide Web. |
+|                     ![Sass](https://img.shields.io/badge/Sass-CC6699.svg?style-plastic-=for-the-badge&logo=Sass&logoColor=white)                     | CSS pre-procesor that make writing CSS more powerful.                       |
+| ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style-plastic-for-the-badge&logo=javascript&?logoWidth=100&?logoColor=%23F7DF1E) | To create dynamically updating content.                                     |
+|        ![HandleBars](https://img.shields.io/badge/Handlebars.js-000000.svg?style-plastic=for-the-badge&logo=handlebarsdotjs&logoColor=white)         | Library used to create reusable webpage templates in HTML document.         |
+|                     ![Json](https://img.shields.io/badge/JSON-000000.svg?style-plastic-=for-the-badge&logo=JSON&logoColor=white)                     | Node Module that is used to create demo rest json webservice                |
+|                                                                     Range-slider                                                                     | JavaScript for the HTML5 slider element.                                    |
+|                                                                      Flatpickr                                                                       | Lightweight datetime picker.                                                |
+|                                                                       Flickity                                                                       | Touch, responsive, flickable carousels.                                     |
+|                  ![Eslint](https://img.shields.io/badge/ESLint-4B32C3.svg?style-plastic-=for-the-badge&logo=ESLint&logoColor=white)                  | Helps you find and fix problems with your JavaScript code.                  |
+|             ![Stylelint](https://img.shields.io/badge/stylelint-263238.svg?style-plastic-=for-the-badge&logo=stylelint&logoColor=white)              | Helps avoid errors and enforce conventions                                  |
+
+<p align="right">(<a  href="#readme-top">back to top</a>)</p>
 
 ## 📌 <a id="roadmap">Roadmap :</a>
 
