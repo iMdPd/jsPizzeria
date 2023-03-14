@@ -60,7 +60,7 @@ information alert. Selecting a free table changes its color to green. After clic
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🛠️ <a id="languages">Languages & tools</a>
+## 🛠️ <a id="languages">Languages & tools :</a>
 
 |                                                                   Language / Tool                                                                    | Description                                                                 |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------- |
